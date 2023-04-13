@@ -161,15 +161,15 @@ public class OtherUtil
     {   
         return;
         // Get current version number
-        String version = getCurrentVersion();
+        // String version = getCurrentVersion();
         
-        // Check for new version
-        String latestVersion = getLatestVersion();
+        // // Check for new version
+        // String latestVersion = getLatestVersion();
         
-        if(latestVersion!=null && !latestVersion.equals(version))
-        {
-            prompt.alert(Prompt.Level.WARNING, "JMusicBot Version", String.format(NEW_VERSION_AVAILABLE, version, latestVersion));
-        }
+        // if(latestVersion!=null && !latestVersion.equals(version))
+        // {
+        //     prompt.alert(Prompt.Level.WARNING, "JMusicBot Version", String.format(NEW_VERSION_AVAILABLE, version, latestVersion));
+        // }
     }
     
     public static String getCurrentVersion()

@@ -158,17 +158,18 @@ public class OtherUtil
     }
     
     public static void checkVersion(Prompt prompt)
-    {
+    {   
+        return;
         // Get current version number
-        String version = getCurrentVersion();
+        // String version = getCurrentVersion();
         
-        // Check for new version
-        String latestVersion = getLatestVersion();
+        // // Check for new version
+        // String latestVersion = getLatestVersion();
         
-        if(latestVersion!=null && !latestVersion.equals(version))
-        {
-            prompt.alert(Prompt.Level.WARNING, "JMusicBot Version", String.format(NEW_VERSION_AVAILABLE, version, latestVersion));
-        }
+        // if(latestVersion!=null && !latestVersion.equals(version))
+        // {
+        //     prompt.alert(Prompt.Level.WARNING, "JMusicBot Version", String.format(NEW_VERSION_AVAILABLE, version, latestVersion));
+        // }
     }
     
     public static String getCurrentVersion()
@@ -184,7 +185,7 @@ public class OtherUtil
         try
         {
             Response response = new OkHttpClient.Builder().build()
-                    .newCall(new Request.Builder().get().url("https://api.github.com/repos/jagrosh/MusicBot/releases/latest").build())
+                    .newCall(new Request.Builder().get().url("https://api.github.com/repos/userbyte/better-jmusicbot/releases/latest").build())
                     .execute();
             ResponseBody body = response.body();
             if(body != null)
